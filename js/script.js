@@ -24,12 +24,10 @@ function mostarPokemon(){
 
 const request = new XMLHttpRequest();
 
-request addEventListener("readystatechange", (e) => {
+request.addEventListener("readystatechange", (e) => {
     if (e.target.readyState ==== 4){
         const datos = JSON.parse(e.target.responseText);
-        HTMLFormControlsCollection.log(datos)
-    }
-});
+        console.log(datos); }
+    } )
 
-
-request.open('https://pokeapi.co/v2/pokemon')
+    request.open('https://pokeapi.co/v2/pokemon')
