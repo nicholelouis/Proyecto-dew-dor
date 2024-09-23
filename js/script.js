@@ -21,3 +21,15 @@ button.addEventListener('click', () => {
 function mostarPokemon(){
     document.querySelector('.cargandoDatos').style.visibility = 'visible';
 };
+
+const request = new XMLHttpRequest();
+
+request addEventListener("readystatechange", (e) => {
+    if (e.target.readyState ==== 4){
+        const datos = JSON.parse(e.target.responseText);
+        HTMLFormControlsCollection.log(datos)
+    }
+});
+
+
+request.open('https://pokeapi.co/v2/pokemon')
